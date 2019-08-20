@@ -9,7 +9,11 @@
 
   <div class="container">
 <!-- forEach allPosts-->
-     
+    <% posts.forEach((post) => {%>
+      <%- include('allPosts', {post: post}); -%>
+    
+    <% }); %>    
+
   </div>
   
   <%- include('footer'); -%>

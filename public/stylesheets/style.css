@@ -13,3 +13,13 @@ body {
 .min-height-effect {
   height: 10px;
 }
+
+.link-post {
+  text-decoration: none;
+  color: #292828;
+}
+
+.link-post:hover {
+  text-decoration: none;
+  color: #292828;
+}
