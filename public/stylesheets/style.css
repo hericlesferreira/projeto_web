@@ -1,0 +1,15 @@
+body {
+  background-image: url("/images/tile.jpg");
+}
+
+.bg-danger-light {
+  background-color: #ee4853;
+}
+
+.bg-danger-dark {
+  background-color: #c01132;
+}
+
+.min-height-effect {
+  height: 10px;
+}
