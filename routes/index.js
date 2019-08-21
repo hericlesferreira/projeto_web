@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var postsService = require('../services/postsServices');
+var projectService = require('../services/projectService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -30,6 +31,24 @@ router.get('/posts/:postId', function(req, res, next) {
   var post = posts.filter((post) => post.id == postId)[0];
 
   res.render('post', {title: post.title, post: post });
+
+});
+
+router.get('/projetos', function(req, res, next) {
+  var project = projectService.getProjects();
+
+  res.render('projects', { title: 'Projetos', project: project});
+
+});
+
+router.get('/projetos/:projectId', function(req, res, next) {
+  var projectId = req.params.projectId;
+
+  var project = projectService.getProjects();
+
+  var project = project.filter((project) => project.id == projectId)[0];
+
+  res.render('project', {title: project.name, project: project});
 
 });
 

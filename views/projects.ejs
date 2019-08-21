@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><% title %></title>
+  <%- include('imports'); -%>
+</head>
+<body>
+  <%- include('navbar'); -%>
+
+  <div class="container">
+<!-- forEach allProjects-->
+    <% project.forEach((project) => {%>
+      <%- include('allProjects', {project: project}); -%>
+    
+    <% }); %>    
+
+  </div>
+  
+  <%- include('footer'); -%>
+</body>
+</html>
