@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><% title %></title>
+  <%- include('imports'); -%>
+</head>
+<body>
+  <%- include('navbar'); -%>
+
+  <div class="container">
+<!-- forEach allJobs-->
+    <% jobs.forEach((job) => {%>
+      <%- include('allJobs', {job: job}); -%>
+    
+    <% }); %>    
+
+  </div>
+  
+  <%- include('footer'); -%>
+</body>
+</html>
