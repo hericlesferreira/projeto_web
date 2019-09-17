@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var postsService = require('../services/postsServices');
 var projectService = require('../services/projectService');
-var jobsService = require('../services/jobsService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -51,13 +50,6 @@ router.get('/projetos/:projectId', function(req, res, next) {
 
   res.render('project', {title: project.name, project: project});
 
-});
-
-router.get('/jobs', function(req, res, next) {
-  var jobs = jobsService.getJobs();
-
-  res.render('jobs', {title: 'Vagas', jobs: jobs});
-  
 });
 
 module.exports = router;
